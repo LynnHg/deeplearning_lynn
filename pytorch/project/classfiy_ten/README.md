@@ -12,6 +12,6 @@
     <img src="https://raw.githubusercontent.com/LynnHg/deeplearning_lynn/master/pytorch/project/classfiy_ten/showtime/1-4.png"/>
 </center>
 
-center class="half">
+<center class="half">
     <img src="https://raw.githubusercontent.com/LynnHg/deeplearning_lynn/master/pytorch/project/classfiy_ten/showtime/1-3.png"/>
 </center>
