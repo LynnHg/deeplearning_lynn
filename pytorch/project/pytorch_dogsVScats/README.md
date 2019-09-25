@@ -5,9 +5,9 @@
 </center>
 
 <center class="half">
-    <img src="https://raw.githubusercontent.com/LynnHg/deeplearning_lynn/master/pytorch/project/pytorch_dogsVScats/showtime/3-1.png"/>
+    <img src="https://raw.githubusercontent.com/LynnHg/deeplearning_lynn/master/pytorch/project/pytorch_dogsVScats/showtime/1-2.png"/>
 </center>
 
 <center class="half">
-    <img src="https://raw.githubusercontent.com/LynnHg/deeplearning_lynn/master/pytorch/project/pytorch_dogsVScats/showtime/3-2.png"/>
+    <img src="https://raw.githubusercontent.com/LynnHg/deeplearning_lynn/master/pytorch/project/pytorch_dogsVScats/showtime/1-3.png"/>
 </center>
