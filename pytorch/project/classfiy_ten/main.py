@@ -12,10 +12,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 import random
+from tqdm import tqdm
 
 dst = Dataset()
-# model = resnet18()
-model = AlexNet()
+model = resnet18()
+# model = AlexNet()
 
 epoches = 10
 gpu_is_available = False
@@ -75,24 +76,18 @@ def train():
     for epoch in range(1, epoches + 1):
         print('Epoch {}/{}'.format(epoch, epoches))
         print('-' * 20)
-
         running_loss = 0.0
         running_correct = 0
-
         for batch, data in enumerate(dst.data_loader_train, 1):
             X, y = data
             if gpu_is_available:
                 X, y = X.cuda(), y.cuda()
-
             outputs = model(X)
-
             _, y_pred = torch.max(outputs, dim=1)
             optimizer.zero_grad()
             loss = loss_fn(outputs, y)
             loss.backward()
-
             optimizer.step()
-
             running_loss += loss.detach().item()
             running_correct += torch.sum(y_pred == y)
             if batch % 3000 == 0:
@@ -234,8 +229,6 @@ def show_top_data(top1_data, top5_data):
     plt.show()
 
 def test():
-    from tqdm import tqdm
-
     correct = 0
     test_top1_results = []
     test_top5_results = []
@@ -243,22 +236,17 @@ def test():
         if gpu_is_available:
             X, y = imgs.cuda(), labels.cuda()
             outputs = model(X)
-
         # top-1 accuracy
         score, pred = torch.max(F.softmax(outputs.cpu(), 1).detach(), 1)
         correct += torch.sum(pred == y.cpu())
         if batch % 100 == 0:
             print('Batch {}/{}, Test Acc:{}/{}={:.2f}%'.format(
-                batch,
-                len(dst.data_loader_test),
-                correct.item(),
-                batch * dst.batch_size,
-                100*correct.item()/(batch*dst.batch_size)
+                batch, len(dst.data_loader_test), correct.item(),
+                batch * dst.batch_size, 100*correct.item()/(batch*dst.batch_size)
             ))
-        batch_results = [(_imgs, trans_to_percent(_score.item()), dst.classes[_pred.item()]) for _imgs, _score, _pred in
-                             zip(imgs, score, pred)]
+        batch_results = [(_imgs, trans_to_percent(_score.item()), dst.classes[_pred.item()])
+                         for _imgs, _score, _pred in zip(imgs, score, pred)]
         test_top1_results += batch_results
-
         # top-5 accuracy
         batch_scores = F.softmax(outputs.cpu(), 1)
         top = 5
@@ -267,8 +255,7 @@ def test():
             top5_scores_index = batch_scores.detach().numpy()[i].argsort()[::-1][0:top]
             top5_scores = [batch_scores[i][j] for j in top5_scores_index]
             img = imgs[i]
-            top5_batch_results += [(img,
-                                    [_score.item() for _score in top5_scores],
+            top5_batch_results += [(img,[_score.item() for _score in top5_scores],
                                     [dst.classes[_pred.item()] for _pred in top5_scores_index])]
         test_top5_results += top5_batch_results
     write_csv(test_top5_results, 5, 'test_top5_results.csv')

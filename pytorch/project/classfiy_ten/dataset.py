@@ -16,4 +16,4 @@ class Dataset:
 
         self.data_loader_train = torch.utils.data.DataLoader(self.data_train, batch_size=self.batch_size, shuffle=True)
         self.data_loader_test = torch.utils.data.DataLoader(self.data_test, batch_size=self.batch_size, shuffle=False)
-        self.classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+        self.classes = ('airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')

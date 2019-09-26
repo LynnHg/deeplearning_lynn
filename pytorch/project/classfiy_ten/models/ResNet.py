@@ -14,7 +14,6 @@ def conv3x3(inplanes, planes, stride=1):
 # 2层残差学习单元
 class BasicBlock(nn.Module):
     expansion = 1
-
     def __init__(self, inplanes, planes, stride=1, downsample=None):
         super().__init__()
         self.conv1 = conv3x3(inplanes, planes, stride)
@@ -27,26 +26,20 @@ class BasicBlock(nn.Module):
 
     def forward(self, x):
         identity = x
-
         out = self.conv1(x)
         out = self.bn1(out)
         out = self.relu(out)
-
         out = self.conv2(out)
         out = self.bn2(out)
-
         if self.downsample is not None:
             identity = self.downsample(x)
-
         out += identity
         out = self.relu(out)
-
         return out
 
 # 3层残差学习单元
 class Bottleneck(nn.Module):
     expansion = 4
-
     def __init__(self, inplanes, planes, stride=1, downsample=None):
         super().__init__()
         self.conv1 = conv1x1(inplanes, planes)
@@ -61,24 +54,18 @@ class Bottleneck(nn.Module):
 
     def forward(self, x):
         identity = x
-
         out = self.conv1(x)
         out = self.bn1(out)
         out = self.relu(out)
-
         out = self.conv2(out)
         out = self.bn2(out)
         out = self.relu(out)
-
         out = self.conv3(out)
         out = self.bn3(out)
-
         if self.downsample is not None:
             identity = self.downsample(x)
-
         out += identity
         out = self.relu(out)
-
         return out
 
 
@@ -108,13 +95,6 @@ class ResNet(nn.Module):
                 nn.init.constant_(m.bias, 0)
 
     def _make_layer(self, block, planes, blocks, stride=1):
-        """Integrate blocks
-        :param block: Type of block. BasicBlock or Bottleneck
-        :param planes: Number of channels in the input image
-        :param blocks: Number of blocks
-        :param stride: Stride of the convolution.Default:1
-        :return: Sequential of blocks
-        """
         downsample = None
         if stride != 1 or self.inplanes != planes * block.expansion:
             downsample = nn.Sequential(
@@ -133,25 +113,15 @@ class ResNet(nn.Module):
         x = self.bn1(x)
         x = self.relu(x)
         x = self.maxpool(x)
-
         x = self.layer1(x)
         x = self.layer2(x)
         x = self.layer3(x)
         x = self.layer4(x)
-
         x = self.avgpool(x)
         x = torch.flatten(x, 1)
         x = self.fc(x)
-
         return x
 
 
-def resnet18(pretrained=False, **kwargs):
-    """Constructs a ResNet-18 model.
-    :param pretrained: bool,if True, return a model pre-trained in ImageNet
-    :param kwargs:
-    :return:
-    """
+def resnet18():
     return ResNet(BasicBlock, [2, 2, 2, 2], num_classes=10)
-
-
