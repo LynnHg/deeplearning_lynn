@@ -1,0 +1,9 @@
+__pycache__
+.vscode
+.ipynb_checkpoints
+.spyproject
+.idea
+.tmp
+datas
+models/vgg16-397923af.pth
+checkpoints
