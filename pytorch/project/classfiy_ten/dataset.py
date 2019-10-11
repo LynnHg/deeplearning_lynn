@@ -17,3 +17,10 @@ class Dataset:
         self.data_loader_train = torch.utils.data.DataLoader(self.data_train, batch_size=self.batch_size, shuffle=True)
         self.data_loader_test = torch.utils.data.DataLoader(self.data_test, batch_size=self.batch_size, shuffle=False)
         self.classes = ('airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+
+
+import matplotlib.pyplot as plt
+plt.figure()
+
+plt.plot([1,2,3], [0.8,0.6,0.5,0.4])
+plt.show()

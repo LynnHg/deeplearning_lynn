@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="174dcef0-f4bd-4fb4-a4f6-7cbe665a83eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../pytorch_mnist/dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pytorch_mnist/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pytorch_mnist/models/LeNet5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pytorch_mnist/models/MyCNN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classfiy_ten/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../classfiy_ten/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classfiy_ten/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/../classfiy_ten/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classfiy_ten/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../classfiy_ten/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pytorch_mnist/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pytorch_mnist/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pytorch_mnist/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pytorch_mnist/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pytorch_mnist/mnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pytorch_mnist/mnist.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,13 +28,33 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="182" column="10" selection-start-line="182" selection-start-column="10" selection-end-line="182" selection-end-column="10" />
+            <state relative-caret-position="500">
+              <caret line="95" column="31" lean-forward="true" selection-start-line="92" selection-start-column="11" selection-end-line="95" selection-end-column="31" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
-                <element signature="e#1140#1614#0" />
-                <element signature="e#1645#3589#0" />
+                <element signature="e#4370#5292#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/dataset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="14" column="57" selection-start-line="11" selection-start-column="8" selection-end-line="14" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -50,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/GoogLeNet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-303">
+            <state relative-caret-position="1075">
               <caret line="43" column="15" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="15" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -113,9 +143,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="785" />
+    <option name="x" value="725" />
+    <option name="y" value="24" />
     <option name="width" value="1117" />
-    <option name="height" value="1047" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -125,14 +156,34 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pytorch_dogsVScats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pytorch_dogsVScats" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pytorch_dogsVScats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pytorch_dogsVScats" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pytorch_dogsVScats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pytorch_dogsVScats" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../python/nationClassify" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -278,8 +329,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.812398" visible="true" weight="0.14436248" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.812398" visible="true" weight="0.08166491" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.18760195" side_tool="true" weight="0.09378293" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -489,20 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/result.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="607550">
@@ -510,10 +548,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/AlexNet.py">
+    <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+        <state relative-caret-position="400">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -521,6 +559,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/GoogLeNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1075">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -534,24 +582,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/GoogLeNet.py">
+    <entry file="file://$PROJECT_DIR$/data/dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-303">
-          <caret line="43" column="15" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="15" />
+        <state relative-caret-position="25">
+          <caret line="14" column="57" selection-start-line="11" selection-start-column="8" selection-end-line="14" selection-end-column="57" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/AlexNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="182" column="10" selection-start-line="182" selection-start-column="10" selection-end-line="182" selection-end-column="10" />
+        <state relative-caret-position="500">
+          <caret line="95" column="31" lean-forward="true" selection-start-line="92" selection-start-column="11" selection-end-line="95" selection-end-column="31" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
-            <element signature="e#1140#1614#0" />
-            <element signature="e#1645#3589#0" />
+            <element signature="e#4370#5292#0" />
           </folding>
         </state>
       </provider>
