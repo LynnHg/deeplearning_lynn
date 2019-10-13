@@ -1,5 +1,7 @@
 ### 数据集下载和使用说明
-数据集下载：
+数据集下载：链接：https://pan.baidu.com/s/1Ua5zT5Gtw7iaGnYf_hYwmg 
+提取码：sw65 
+
 下载完成后将整个datas解压到项目更目录即可。
 
 ### 训练and测试结果展示
