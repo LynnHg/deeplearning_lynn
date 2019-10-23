@@ -12,19 +12,19 @@ from models.FCN import FCN8s, FCN16s, FCN32s, FCNs, VGGNet
 import common
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = torch.load('checkpoints/fcn_model_8.pth')  # 加载模型
+model = torch.load('checkpoints/model_u.pth')  # 加载模型
 model = model.to(device)
 transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])])
 
 if __name__ == '__main__':
-    size = 1
+    size = 2
     i = 0
     fig = plt.figure()
     for _ in range(size):
-        # index = math.floor(random.random() * 600)
-        indexs = [58]
+        index = math.floor(random.random() * 600)
+        indexs = [425, 419]
         img_name = r'datas/bag_data/' + str(indexs[_]) + '.jpg'
         imgA = cv2.imread(img_name)
         img = imgA
@@ -41,9 +41,7 @@ if __name__ == '__main__':
         output = torch.sigmoid(output)
 
         output_np = output.cpu().detach().numpy().copy()  # output_np.shape = (4, 2, 160, 160)
-        print(output_np.shape)  # (1, 2, 160, 160)
         output_np = np.argmin(output_np, axis=1)
-        print(output_np.shape)  # (1,160, 160)
 
         cols = 3
         ax1 = plt.subplot(size, cols, i + 1)
@@ -53,7 +51,7 @@ if __name__ == '__main__':
         ax1.imshow(img)
 
         ax2 = plt.subplot(size, cols, i + 2)
-        ax2.set_title('FCN16s')
+        ax2.set_title('pred')
         ax2.set_xticks([])
         ax2.set_yticks([])
         ax2.imshow(np.squeeze(output_np[0, ...]), 'gray')

@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="174dcef0-f4bd-4fb4-a4f6-7cbe665a83eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../classfiy_ten/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../classfiy_ten/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pytorch_mnist/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pytorch_mnist/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pytorch_fcn_demo/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pytorch_fcn_demo/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pytorch_fcn_demo/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pytorch_fcn_demo/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +17,37 @@
     <favorites_list name="pytorch_dogsVScats" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/GoogLeNet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="49" selection-start-line="49" selection-end-line="54" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#674#905#0" />
+                <element signature="e#1140#1614#0" />
+                <element signature="e#1645#3589#0" />
+                <element signature="e#3626#4347#0" />
+                <element signature="e#5326#5344#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -57,10 +89,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="725" />
-    <option name="y" value="24" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1117" />
-    <option name="height" value="1000" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -70,7 +102,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -81,12 +112,13 @@
             <path>
               <item name="pytorch_dogsVScats" type="b2602c69:ProjectViewProjectNode" />
               <item name="pytorch_dogsVScats" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -238,8 +270,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.812398" visible="true" weight="0.19968387" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.812398" visible="true" weight="0.11327714" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.18760195" side_tool="true" weight="0.09378293" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -456,21 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-353">
-          <caret line="90" column="34" lean-forward="true" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <element signature="e#674#905#0" />
-            <element signature="e#1140#1614#0" />
-            <element signature="e#3626#4347#0" />
-            <element signature="e#4370#5292#0" />
-            <element signature="e#5326#5344#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/dataset.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -518,22 +536,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/GoogLeNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="822">
-          <caret line="43" column="15" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/ItoolsProgram/Anaconda3/envs/py37/Lib/site-packages/torch/nn/functional.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="e#28#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/GoogLeNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="49" selection-start-line="49" selection-end-line="54" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#674#905#0" />
+            <element signature="e#1140#1614#0" />
+            <element signature="e#1645#3589#0" />
+            <element signature="e#3626#4347#0" />
+            <element signature="e#5326#5344#0" />
           </folding>
         </state>
       </provider>
